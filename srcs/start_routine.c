@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:20:44 by yosherau          #+#    #+#             */
-/*   Updated: 2025/06/10 20:24:21 by yosherau         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:46:33 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*start_routine(void *args)
 		wait_threads_ready(philo->prog);
 		set_long(&philo->last_meal_lock, &philo->last_meal, get_time(MILLI));
 		increment_running_threads(philo->prog, &philo->prog->threads_running);
-		// stagger_threads(philo, philo->prog);
+		stagger_threads(philo, philo->prog);
 		while (!get_bool(&philo->prog->sim_end_lock,
 				&philo->prog->sim_has_ended))
 		{

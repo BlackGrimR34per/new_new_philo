@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 08:09:56 by yosherau          #+#    #+#             */
-/*   Updated: 2025/06/10 18:58:48 by yosherau         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:47:48 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(int argc, char *argv[])
 	init_philos(&prog);
 	destroy_mallocs(&prog);
 	if (prog.limit_meals && prog.philo_dieded == false)
-		printf(MAGENTA "Philo's has eaten at least %ld\n" RST, prog.meals_to_have);
+		printf(MAGENTA "Philo's has eaten at least %ld\n" RST,
+			prog.meals_to_have);
 	printf(WHITE "Simulation has ended\n" RST);
 }

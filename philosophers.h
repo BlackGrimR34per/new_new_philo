@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 08:09:59 by yosherau          #+#    #+#             */
-/*   Updated: 2025/06/10 20:30:00 by yosherau         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:46:26 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@
 #  define MAGENTA ""
 #  define WHITE ""
 # endif
-
 
 # define INVALID_ARGS "Invalid number of args\n"
 # define INVALID_ARG_FORMAT "Args provided is invalid\n"

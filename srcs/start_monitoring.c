@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:25:30 by yosherau          #+#    #+#             */
-/*   Updated: 2025/06/10 19:37:29 by yosherau         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:47:03 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	philos_has_eaten(t_prog *prog)
 	index = -1;
 	if (!prog->limit_meals)
 		return (0);
-	while (++index  < prog->num_of_philos)
+	while (++index < prog->num_of_philos)
 	{
 		meals_had = get_long(&prog->philos[index].meal_lock,
 				&prog->philos[index].meals_eaten);
@@ -43,8 +43,8 @@ void	*start_monitoring(void	*args)
 		index = -1;
 		while (++index < prog->num_of_philos)
 		{
-			last_meal = get_long(&prog->philos[index].last_meal_lock
-				,&prog->philos[index].last_meal);
+			last_meal = get_long(&prog->philos[index].last_meal_lock,
+					&prog->philos[index].last_meal);
 			if (philos_has_eaten(prog))
 				set_bool(&prog->sim_end_lock, &prog->sim_has_ended, true);
 			if (get_time(MILLI) - last_meal > prog->time_to_die)
