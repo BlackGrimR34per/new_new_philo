@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 17:42:51 by yosherau          #+#    #+#             */
-/*   Updated: 2025/06/09 08:23:45 by yosherau         ###   ########.fr       */
+/*   Updated: 2025/06/21 17:25:55 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ long	ft_atol(char *str)
 	nbr = 0;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == 43)
+	if (*str == ADDITION_ASCII)
 		str++;
 	while (ft_isdigit(*str))
 		nbr = nbr * 10 + (*str++ - 48);
