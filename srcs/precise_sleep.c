@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:36:57 by yosherau          #+#    #+#             */
-/*   Updated: 2025/06/10 18:30:05 by yosherau         ###   ########.fr       */
+/*   Updated: 2025/06/21 17:27:13 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	precise_sleep(long usec, t_prog *prog)
 			break ;
 		elapsed = get_time(MICRO) - start;
 		remainder = usec - elapsed;
-		if (remainder > 1e3)
+		if (remainder > 1000)
 			usleep(remainder / 2);
 		else
 		{
